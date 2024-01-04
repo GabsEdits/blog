@@ -1,4 +1,6 @@
 {
+  "name": "blog",
+  "version": "1.0.0",
   "scripts": {
     "pages:dev": "vitepress dev pages",
     "pages:build": "vitepress build pages",
