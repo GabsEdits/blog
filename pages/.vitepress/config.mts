@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import { genFeed } from './rss.ts'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -16,7 +17,10 @@ export default defineConfig({
       accent: "#f17755",
     },
     nav: {
-      links: [{ text: "Website", link: "https://gabs.eu.org" }],
+      links: [
+        { text: "Website", link: "https://gabs.eu.org" },
+        { text: "RSS", link: "/feed.rss" },
+      ],
       git: "https://github.com/GabsEdits/blog",
     },
     footer: {
@@ -62,6 +66,7 @@ export default defineConfig({
     ["meta", { name: "twitter:url", content: "https://blog.gxbs.me" }],
   ],
   sitemap: {
-    hostname: "https://blog.gxbs.me",
+    hostname: "https://blog.gabs.eu.org",
   },
+  buildEnd: genFeed,
 });
