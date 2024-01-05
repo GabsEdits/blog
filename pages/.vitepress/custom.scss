@@ -49,9 +49,15 @@ $bg-color-d: color.scale($color-accent, $lightness: -88%, $saturation: -85%);
 .filter-tags button {
   margin-right: 10px;
   background-color: var(--color-background-second);
-  padding: 3px 5px;
-  border-radius: 8px;
+  border-radius: 20px;
+  padding: .25rem .75rem;
+  font-size: .8rem;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.filter-tags button:hover {
+  transform: scale(1.05);
 }
 
 .tags {
@@ -62,8 +68,8 @@ $bg-color-d: color.scale($color-accent, $lightness: -88%, $saturation: -85%);
   margin-right: 5px;
   color: var(--color-text-secondary);
   background-color: var(--color-background);
-  padding: 3px 5px;
-  border-radius: 8px;
+  padding: .15rem .45rem;
+  border-radius: 20px;
   font-size: 12px;
 }
 

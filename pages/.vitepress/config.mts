@@ -1,5 +1,6 @@
 import { defineConfig } from "vitepress";
-import { genFeed } from './rss.ts'
+import { genFeed } from './rss.ts';
+import RssIcon from './RSSFeed.vue';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -19,9 +20,9 @@ export default defineConfig({
     nav: {
       links: [
         { text: "Website", link: "https://gabs.eu.org" },
-        { text: "RSS", link: "/feed.rss" },
       ],
       git: "https://github.com/GabsEdits/blog",
+      rss: "/feed.rss",
     },
     footer: {
       copyright: true,

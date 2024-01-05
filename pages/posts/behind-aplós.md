@@ -1,7 +1,7 @@
 ---
 title: "Behind Aplós"
 description: My awesome post description
-date: 2024-01-04
+date: 2024-01-04T21:26:00+02:00
 ---
 
 # {{ $frontmatter.title }}
@@ -47,55 +47,54 @@ So, I moved my project to Vitepress. It wasn't that hard, as Aplós acted as cus
 Everything was fun, but there was one issue: Some parts of the theme you **can't** configure through our unified `config.mts` file.  I got the great idea of making the Vue Components (Navigation & Footer) fully changeable inside the `config.mts` file, using the `{ useData }` feature provided by Vitepress. For the Navigation, it wasn't that hard:
 
 ```html
-        <nav>
-            <ul>
-                <li class="h1-nav">
-                    <a href="/" @click="setActive('/')">
-                        <h1>{{ site.title }}</h1>
-                    </a>
-                </li>
-                <li v-for="(navItem, index) in navigation" :key="index">
-                    <a :href="navItem.link" :class="{ 'active': isActive(navItem.link) }"
-                        @click="setActive(navItem.link)">
-                        {{ navItem.text }}
-                    </a>
-                </li>
-                <li v-if="theme.nav.git">
-                    <a :href="theme.nav.git">
-                        <GitAlt />
-                    </a>
-                </li>
-            </ul>
-        </nav>
+<nav>
+    <ul>
+        <li class="h1-nav">
+            <a href="/" @click="setActive('/')">
+                <h1>{{ site.title }}</h1>
+            </a>
+        </li>
+        <li v-for="(navItem, index) in navigation" :key="index">
+            <a :href="navItem.link" :class="{ 'active': isActive(navItem.link) }" @click="setActive(navItem.link)">
+                {{ navItem.text }}
+            </a>
+        </li>
+        <li v-if="theme.nav.git">
+            <a :href="theme.nav.git">
+                <GitAlt />
+            </a>
+        </li>
+    </ul>
+</nav>
 ```
 
 It was quite easy, as I was just taking the required data. With that done, this is how your configuration looked:
 
 ```ts
-  themeConfig: {
-    nav: {
-      links: [ // Navigation Links
-        { text: "Something", link: "/something" },
-        // And you can add the same
-      ],
-      git: "https://github.com/GabsEdits/blog", 
-    },
+themeConfig: {
+  nav: {
+    links: [ // Navigation Links
+      { text: "Something", link: "/something" },
+      // And you can add the same
+    ],
+     git: "https://github.com/GabsEdits/blog", 
   },
+},
 ```
 
 I was happy with the result, so I did the same with the footer, which was even easier:
 
 ```ts
-    footer: {
-      copyright: true,
-      poweredBy: true,
+footer: {
+  copyright: true,
+  poweredBy: true,
 
-      madeby: {
-        show: true,
-        name: "Gabs",
-        link: "https://gxbs.me",
-      },
-    },
+  madeby: {
+    show: true,
+    name: "Gabs",
+    link: "https://gxbs.me",
+  },
+},
 ```
 
 Now that can easily be changed in the config. There is one more issue: The Colors that still need to be fully changed inside the theme folder.
