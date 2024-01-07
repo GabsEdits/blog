@@ -1,6 +1,5 @@
 import { defineConfig } from "vitepress";
 import { genFeed } from './rss.ts';
-import RssIcon from './RSSFeed.vue';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({

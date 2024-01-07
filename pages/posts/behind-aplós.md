@@ -10,11 +10,11 @@ For the past two weeks, I've been working on a new project called "Aplós"! I ha
 
 ## Why?
 
-In the last week of December, I came across a fun project by Daudix called [Duckquill](https://daudix.codeberg.page/duckquill/). It inspired me to create something similar but for HTML & Vue.
+In the last week of December, I came across a fun project by Daudix called [Duckquill](https://daudix.codeberg.page/duckquill/). It inspired me to create something similar but for CSS & Vue.js.
 
 ## The Start
 
-Initially, I began the project with HTML & CSS, creating a template with styles. Later, I decided to switch to **Vue & Vite** to leverage the powerful Vue Components system. This is how Cards/Custom Containers became a thing, making website creation a breeze:
+Initially, I began the project with HTML & CSS, creating a template with styles. Later, I decided to switch to **Vue.js & Vite** to leverage the powerful Vue.js Components system. This is how Cards/Custom Containers became a thing, making website creation a breeze:
 
 ```vue
 <Warning warning="Your warning here" />
@@ -44,7 +44,7 @@ Well, yes, you do have to do some work inside `config.mts`, but it's not that ha
 
 So, I moved my project to Vitepress. It wasn't that hard, as Aplós acted as custom stylesheet for the default Vitepress themes. I could use cool `Custom Containers` & `pre`'s without having to configure them.
 
-Everything was fun, but there was one issue: Some parts of the theme you **can't** configure through our unified `config.mts` file.  I got the great idea of making the Vue Components (Navigation & Footer) fully changeable inside the `config.mts` file, using the `{ useData }` feature provided by Vitepress. For the Navigation, it wasn't that hard:
+Everything was fun, but there was one issue: Some parts of the theme you **can't** configure through our unified `config.mts` file.  I got the great idea of making the Vue.js Components (Navigation & Footer) fully changeable inside the `config.mts` file, using the `{ useData }` feature provided by Vitepress. For the Navigation, it wasn't that hard:
 
 ```html
 <nav>
