@@ -20,7 +20,7 @@ This is my blog, where I post about my projects, and other things I find interes
       <button v-for="tag in uniqueTags" :key="tag" @click="filterPosts(tag)">#{{ tag }}</button>
     </div>
     <div class="post-container">
-      <a v-for="post in filteredPosts" :key="post.title" :href="`/posts/${post.title.toLowerCase().replace(/\s+/g, '-')}`" class="post">
+      <a v-for="post in filteredPosts" :key="post.title" :href="`/posts/${post.title.toLowerCase().replace(/\s+/g, '-')}.html`" class="post">
         <h3>{{ post.title }}</h3>
         <p>{{ post.desc }}</p>
         <p class="date">{{ post.date }}</p>
