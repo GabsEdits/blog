@@ -108,4 +108,4 @@ Sadly, I didn't find an option, so I got the idea (also from Duckquill) to make 
 ## The rest
 After two weeks of building this project during the winter holidays, I am happy to announce that we reached the stable version, and we will continue making this project even better.
 
-I want to thank every project that helped make this come true, special thanks to [Duckquill](https://daudix.codeberg.page/duckquill/). Without it, this project would be a lot worse.
+I want to thank every project that helped make this come true, special thanks to [Duckquill](https://daudix.codeberg.page/duckquill/).
