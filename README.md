@@ -1,3 +1,6 @@
+> [!WARNING]
+> **Information here IS outdated.** Soon I will archive this as the blog source has moved to the main personal website with the migration to Aplós.
+
 <div align="center">
   <img src="https://cdn.jsdelivr.net/npm/twemoji@11.3.0/2/svg/1f340.svg" width="64">
 
